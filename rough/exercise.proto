@@ -16,6 +16,14 @@ message Person{
  //   so we basically generated one type using enums and then we are creating an object of that type.
    color eye=8;
    Date birthday=9;
+   // Nesting the messages
+   message address{
+       int32 street=1;
+       int32 sector=2;
+       string state=3;
+       string country=4;
+   }
+   repeated address Address=10;
 }
 // Multiple types
 
