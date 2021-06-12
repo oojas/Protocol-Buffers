@@ -1,0 +1,26 @@
+syntax="proto3";
+message Person{
+    int32 age=1;
+    first_name string=2;
+    last_name string=3;
+    small_picture byte=4;
+    bool isVerified=5;
+    float height=6;
+    repeated string ojas=7; // Repeated is used to express slices or arrays.
+    enum color{
+        black=0; 
+        blue=1;
+        red=2;
+        green=3;
+    }
+ //   so we basically generated one type using enums and then we are creating an object of that type.
+   color eye=8;
+   Date birthday=9;
+}
+// Multiple types
+
+message Date{
+    int32 day=1;
+    int32 month=2;
+    int32 year=3;
+}
